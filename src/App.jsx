@@ -1,10 +1,12 @@
 import "./App.css";
+import Header from "./components/Header";
 
 function App() {
   return (
     <>
-      <h1>Vite + React + TailwindCSS</h1>
-      <div className="p-4 pt-2">Netflix Sans Font</div>
+      <Header/>
+
+      <p className="my-4 h-2 border border-cyan-500 bg-slate-200"></p>
     </>
   );
 }
