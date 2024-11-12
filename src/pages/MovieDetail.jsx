@@ -3,13 +3,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CircularProgressBar from "../components/CircularProgressBar";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Loading from "../components/Loading";
 
 function MovieDetail() {
   const { id } = useParams();
   const [movie, setMovie] = useState({});
-  console.log({ id });
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    setIsLoading(true);
     const url = `https://api.themoviedb.org/3/movie/${id}`;
     const options = {
       method: "GET",
@@ -23,14 +25,22 @@ function MovieDetail() {
     fetch(url, options)
       .then((res) => res.json())
       .then((json) => {
-        console.log({ json });
         setMovie(json);
       })
-      .catch((err) => console.error(err));
+      .catch((err) => {
+        console.error(err);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   }, [id]);
 
+  if (isLoading) {
+    return <Loading />;
+  }
+
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden text-white">
       <img
         src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
         className="absolute inset-0 w-full brightness-[0.2]"
