@@ -6,7 +6,6 @@ function HeaderNew() {
   return (
     <main className="px-4 py-6 sm:p-6 md:px-8 md:py-10">
       <section className="mx-auto grid max-w-4xl grid-cols-1 lg:max-w-5xl lg:grid-cols-2 lg:gap-x-20">
-        
         <div className="relative col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 p-3 sm:row-start-2 sm:bg-none sm:p-0 lg:row-start-1">
           <h1 className="mt-1 text-lg font-semibold text-white sm:text-slate-900 md:text-2xl">
             Beach House in Collingwood
@@ -68,7 +67,6 @@ function HeaderNew() {
           restaurants and supermarkets and is close to all the major attractions
           such as Edinburgh Castle and Arthurs Seat.
         </p>
-        
       </section>
     </main>
   );
