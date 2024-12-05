@@ -2,10 +2,6 @@ import { faStar } from "@fortawesome/free-regular-svg-icons";
 import { faLocation } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faStar } from "@fortawesome/free-regular-svg-icons";
-import { faLocation } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 function Header() {
   return (
     <>
