@@ -40,7 +40,7 @@ function MovieDetail() {
   }
 
   return (
-    <div className="relative overflow-hidden text-white">
+    <div className="container relative overflow-hidden text-white">
       <img
         src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
         className="absolute inset-0 w-full brightness-[0.2]"

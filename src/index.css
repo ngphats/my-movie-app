@@ -42,3 +42,9 @@
     font-family: "Netflix Sans", system-ui, sans-serif;
   }
 }
+
+@layer components {
+  .container {
+    @apply mx-auto max-w-screen-xl;
+  }
+}
