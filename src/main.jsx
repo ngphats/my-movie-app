@@ -1,10 +1,14 @@
+import "./index.css";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage.jsx";
-import MovieDetail from "./pages/MovieDetail.jsx";
 import RootLayout from "./pages/RootLayout.jsx";
+import { lazy } from "react";
 
-import "./index.css";
+// eslint-disable-next-line react-refresh/only-export-components
+const MovieDetail = lazy(() => {
+  import("./pages/MovieDetail.jsx");
+});
 
 const router = createBrowserRouter([
   {

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import CircularProgressBar from "../CircularProgressBar";
+import ImageComponent from "@components/ImageComponent";
 
 function MovieCard({ movie }) {
   const {
@@ -22,9 +23,11 @@ function MovieCard({ movie }) {
       )}
 
       <Link to={`movie/${id}`}>
-        <img
+        <ImageComponent
           src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
-          className="overflow-hidden rounded-lg"
+          style="overflow-hidden rounded-lg"
+          width={500}
+          height={800}
         />
       </Link>
       <div className="relative -top-[1.5vw] px-4">

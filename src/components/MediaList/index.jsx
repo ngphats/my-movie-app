@@ -22,7 +22,7 @@ function MediaList({ title, tabs }) {
         .then((json) => {
           const data = json.results;
           if (data.length > 0) {
-            setMediaList(data.slice(0, 12));
+            setMediaList(data.slice(0, 6));
           }
         })
         .catch((err) => console.error(err));
