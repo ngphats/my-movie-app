@@ -7,12 +7,12 @@ function FeatureMovies() {
   const [activeMovieId, setActiveMovieId] = useState();
 
   useEffect(() => {
-    fetch("https://api.themoviedb.org/3/movie/popular", {
+    fetch(`${import.meta.env.VITE_MOVIE_API_KEY}/movie/popular`, {
       method: "GET",
       headers: {
         accept: "application/json",
         Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlOWJiYmE3M2E0MTI5OWM0MDZjMDZhMzE5ZTdlZmZmNyIsIm5iZiI6MTczMTE0Mjg0Ny43OTI0NTk1LCJzdWIiOiI2NjlhNzQzYzJlNGM5ZjNkZDRiMGY2M2QiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.xLdgEpURNib1d9dlfNT0YpndbSBmoK4gVbJXQ_GzE4Y",
+          `Bearer ${import.meta.env.VITE_MOVIE_API_KEY}`,
       },
     }).then(async (res) => {
       const data = await res.json();
